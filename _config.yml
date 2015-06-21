@@ -1,0 +1,6 @@
+name: Frontâle
+markdown: redcarpet
+permalink: pretty
+destination: '.jekyll'
+layouts: 'layouts'
+exclude: ['/bower_components', '/node_modules']

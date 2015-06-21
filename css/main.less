@@ -1,0 +1,49 @@
+@import (less) "../bower_components/.dist/bower.css";
+
+@colorBg: white;
+@colorFg: #4D4D4D;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  color: @colorFg;
+  font-weight: 300;
+}
+
+body {
+  background-color: @colorBg;
+}
+
+#splash {
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 30vh;
+
+  @media screen and (max-height: 500px){
+    padding-top: 20vh;
+  }
+
+  @media screen and (max-height: 350px){
+    padding-top: 15vh;
+  }
+
+  .logo {
+    display: block;
+    margin: 0 auto;
+    text-transform: uppercase;
+    height: 30vmin;
+  }
+
+  .info {
+    margin-top: 10vh;
+    font-size: 0.9em;
+    line-height: 1.8em;
+
+    @media screen and (max-height: 350px){
+      margin-top: 0;
+    }
+  }
+}

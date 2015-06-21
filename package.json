@@ -1,0 +1,18 @@
+{
+  "name": "frontale.ch",
+  "version": "0.0.1",
+  "repository": "https://github.com/frontale-festival/frontale-festival.github.io",
+  "devDependencies": {
+    "glob": "^5.0.9",
+    "grunt": "~0.4.5",
+    "grunt-bower-concat": "^0.5.0",
+    "grunt-contrib-connect": "^0.10.1",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-jekyll-pages": "^0.4.6",
+    "less-plugin-autoprefix": "^1.4.1",
+    "minimatch": "^2.0.8"
+  }
+}

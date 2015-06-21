@@ -1,0 +1,17 @@
+{
+  "name": "frontale-festival.github.io",
+  "version": "0.0.1",
+  "homepage": "https://github.com/frontale-festival/frontale-festival.github.io",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "~3.0.3"
+  }
+}
