@@ -360,20 +360,22 @@ th {
 }
 html {
   font-family: Helvetica, Arial, sans-serif;
-  color: #4d4d4d;
+  font-size: 14px;
   font-weight: 300;
+  color: #4d4d4d;
 }
 body {
   background-image: linear-gradient(30deg, #00ceba 0%, #b383b7 80%);
 }
 #splash {
   min-height: 100vh;
-  text-align: center;
   padding-top: 20vh;
+  text-align: center;
+  line-height: 1.8;
   color: white;
 }
 #splash a {
-  color: #ffcc66;
+  color: #ffd583;
 }
 @media screen and (max-height: 350px) {
   #splash {
@@ -387,16 +389,22 @@ body {
   max-width: 1200px;
   max-height: 40vh;
 }
-#splash .info {
-  font-size: 0.9em;
-  line-height: 1.8em;
+#splash .calendar .addthisevent-drop {
+  font-family: Helvetica, Arial, sans-serif;
 }
-@media screen and (max-height: 350px) {
-  #splash .info {
-    margin-top: 0;
-  }
+#splash .calendar .addthisevent_dropdown .copyx {
+  display: none;
 }
 #splash .donation {
   padding: 20px;
+}
+#footer {
+  padding: 12px;
+  text-align: center;
+  color: #ffd583;
+}
+#footer a {
+  color: #ffd583;
+  text-decoration: none;
 }
 /*# sourceMappingURL=frontale.ch.css.map */
