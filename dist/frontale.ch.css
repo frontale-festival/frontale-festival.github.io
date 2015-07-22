@@ -364,17 +364,16 @@ html {
   font-weight: 300;
 }
 body {
-  background-color: white;
+  background-image: linear-gradient(30deg, #00ceba 0%, #b383b7 80%);
 }
 #splash {
   min-height: 100vh;
   text-align: center;
-  padding-top: 30vh;
+  padding-top: 20vh;
+  color: white;
 }
-@media screen and (max-height: 500px) {
-  #splash {
-    padding-top: 20vh;
-  }
+#splash a {
+  color: #ffcc66;
 }
 @media screen and (max-height: 350px) {
   #splash {
@@ -383,12 +382,12 @@ body {
 }
 #splash .logo {
   display: block;
-  margin: 0 auto;
-  text-transform: uppercase;
-  height: 30vmin;
+  margin: 0 auto 5vh;
+  width: 100%;
+  max-width: 1200px;
+  max-height: 40vh;
 }
 #splash .info {
-  margin-top: 10vh;
   font-size: 0.9em;
   line-height: 1.8em;
 }
