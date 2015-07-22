@@ -6,16 +6,20 @@
 @gradientTurquoise: #00CEBA;
 @gradientOrchid: #B383B7;
 @gradientFg: white;
-@gradientLink: #FFCC66;
+@gradientLink: #ffd583;
+
+@fontSize: 14px;
+@fontFamily: Helvetica, Arial, sans-serif;
 
 *, *:before, *:after {
   box-sizing: border-box;
 }
 
 html {
-  font-family: Helvetica, Arial, sans-serif;
-  color: @colorFg;
+  font-family: @fontFamily;
+  font-size: @fontSize;
   font-weight: 300;
+  color: @colorFg;
 }
 
 body {
@@ -24,8 +28,9 @@ body {
 
 #splash {
   min-height: 100vh;
-  text-align: center;
   padding-top: 20vh;
+  text-align: center;
+  line-height: 1.8;
   color: @gradientFg;
 
   a {
@@ -44,16 +49,27 @@ body {
     max-height: 40vh;
   }
 
-  .info {
-    font-size: 0.9em;
-    line-height: 1.8em;
-
-    @media screen and (max-height: 350px) {
-      margin-top: 0;
+  .calendar {
+    .addthisevent-drop {
+      font-family: @fontFamily;
+    }
+    .addthisevent_dropdown .copyx {
+      display: none;
     }
   }
 
   .donation {
     padding: 20px;
+  }
+}
+
+#footer {
+  padding: 12px;
+  text-align: center;
+  color: @gradientLink;
+
+  a {
+    color: @gradientLink;
+    text-decoration: none;
   }
 }
