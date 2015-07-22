@@ -3,6 +3,11 @@
 @colorBg: white;
 @colorFg: #4D4D4D;
 
+@gradientTurquoise: #00CEBA;
+@gradientOrchid: #B383B7;
+@gradientFg: white;
+@gradientLink: #FFCC66;
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -14,35 +19,36 @@ html {
 }
 
 body {
-  background-color: @colorBg;
+  background-image: linear-gradient(30deg, @gradientTurquoise 0%, @gradientOrchid 80%);
 }
 
 #splash {
   min-height: 100vh;
   text-align: center;
-  padding-top: 30vh;
+  padding-top: 20vh;
+  color: @gradientFg;
 
-  @media screen and (max-height: 500px){
-    padding-top: 20vh;
+  a {
+    color: @gradientLink;
   }
 
-  @media screen and (max-height: 350px){
+  @media screen and (max-height: 350px) {
     padding-top: 15vh;
   }
 
   .logo {
     display: block;
-    margin: 0 auto;
-    text-transform: uppercase;
-    height: 30vmin;
+    margin: 0 auto 5vh;
+    width: 100%;
+    max-width: 1200px;
+    max-height: 40vh;
   }
 
   .info {
-    margin-top: 10vh;
     font-size: 0.9em;
     line-height: 1.8em;
 
-    @media screen and (max-height: 350px){
+    @media screen and (max-height: 350px) {
       margin-top: 0;
     }
   }
