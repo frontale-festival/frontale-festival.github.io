@@ -369,7 +369,7 @@ body {
 }
 #splash {
   min-height: 100vh;
-  padding-top: 20vh;
+  padding-top: 15vh;
   text-align: center;
   line-height: 1.8;
   color: white;
@@ -387,7 +387,7 @@ body {
   margin: 0 auto 5vh;
   width: 100%;
   max-width: 1200px;
-  max-height: 40vh;
+  max-height: 35vh;
 }
 #splash .calendar .addthisevent-drop {
   font-family: Helvetica, Arial, sans-serif;
@@ -396,6 +396,10 @@ body {
   display: none;
 }
 #splash .donation {
+  width: 450px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   padding: 20px;
 }
 #footer {
