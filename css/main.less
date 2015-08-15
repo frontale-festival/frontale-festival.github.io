@@ -2,16 +2,17 @@
 @import (less) "mixins.less";
 @import (less) "icon.less";
 
+@breakpointMedium: 600px;
+
 @gradientTurquoise: #00CEBA;
 @gradientOrchid: #B383B7;
-@gradientFg: white;
-@gradientLink: #ffd583;
 
 @colorGerman: white;
 @colorFrench: #300033;
 
 @colorBg: white;
 @colorFg: @colorFrench;
+@colorLink: #ffd583;
 
 @fontSize: 14px;
 @fontFamily: Helvetica, Arial, sans-serif;
@@ -33,6 +34,22 @@ body {
 
 a {
   text-decoration: none;
+  color: @colorLink;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+
+  span {
+    margin: 0 2px;
+  }
 }
 
 .german {
@@ -41,19 +58,6 @@ a {
 
 .french {
   color: @colorFrench;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 1vh;
-  width: 100%;
-  max-width: 1200px;
-  max-height: 35vh;
-}
-
-.event-meta {
-  font-weight: bold;
-  font-size: 1.6rem;
 }
 
 #navigation {
@@ -70,6 +74,7 @@ a {
   .link {
     display: block;
     text-align: center;
+    margin-bottom: 12px;
 
     .link-circle {
       display: inline-block;
@@ -80,9 +85,19 @@ a {
       border-radius: 50%;
       text-align: center;
 
+      @media (min-width: @breakpointMedium) {
+        width: 12vw;
+        height: 12vw;
+        margin-bottom: 1vh;
+      }
+
       .icon {
         .icon(30px);
         .center-vertically;
+
+        @media (min-width: @breakpointMedium) {
+          .icon(4vw);
+        }
       }
     }
 
@@ -96,32 +111,47 @@ a {
   }
 }
 
-#splash {
+#header {
   min-height: 100vh;
   padding-top: 15vh;
   text-align: center;
   line-height: 1.8;
-  color: @gradientFg;
-
-  a {
-    color: @gradientLink;
-  }
 
   @media screen and (max-height: 350px) {
     padding-top: 15vh;
   }
 
+  .logo {
+    display: block;
+    margin: 0 auto 3vh;
+    width: 100%;
+    max-width: 1200px;
+    max-height: 35vh;
+  }
 
+  .event-meta {
+    font-weight: bold;
+    line-height: 1;
+    font-size: 1.6rem;
+    color: @colorGerman;
+  }
 
   .calendar {
+    margin-bottom: 5vh;
+
     .addthisevent-drop {
       font-family: @fontFamily;
+      background-color: transparent;
+      border: 0;
     }
     .addthisevent_dropdown .copyx {
       display: none;
     }
   }
 
+}
+
+#support {
   .donation {
     width: 450px;
     max-width: 100%;
@@ -134,10 +164,10 @@ a {
 #footer {
   padding: 12px;
   text-align: center;
-  color: @gradientLink;
+  color: @colorLink;
 
   a {
-    color: @gradientLink;
+    color: @colorLink;
     text-decoration: none;
   }
 }
