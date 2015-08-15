@@ -1,15 +1,7 @@
 @import (less) "../bower_components/.dist/bower.css";
-
-@colorBg: white;
-@colorFg: #4D4D4D;
-
-@gradientTurquoise: #00CEBA;
-@gradientOrchid: #B383B7;
-@gradientFg: white;
-@gradientLink: #ffd583;
-
-@fontSize: 14px;
-@fontFamily: Helvetica, Arial, sans-serif;
+@import (less) "variables.less";
+@import (less) "mixins.less";
+@import (less) "icon.less";
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -26,54 +18,267 @@ body {
   background-image: linear-gradient(30deg, @gradientTurquoise 0%, @gradientOrchid 80%);
 }
 
-#splash {
+a {
+  text-decoration: none;
+  color: @colorLink;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+
+  @media (min-width: @breakpointSmall) {
+    font-size: 1.4rem;
+  }
+
+  @media (min-width: @breakpointMedium) {
+    font-size: 1.8rem;
+  }
+
+  span {
+    margin: 0 2px;
+  }
+}
+
+h2 {
+  font-size: 1.1rem;
+
+  @media (min-width: @breakpointSmall) {
+    font-size: 1.2rem;
+  }
+
+  @media (min-width: @breakpointSmall) {
+    font-size: 1.4rem;
+  }
+}
+
+section {
+  max-width: 900px;
+  margin: 0 auto 6vh;
+  padding: 12px;
+}
+
+.german {
+  color: @colorGerman;
+}
+
+.french {
+  color: @colorFrench;
+}
+
+#navigation {
+  padding: 20px 12px;
+
+  .menu {
+    li {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 8px;
+    }
+  }
+
+  .link {
+    display: block;
+    text-align: center;
+    margin-bottom: 12px;
+
+    .link-circle {
+      display: inline-block;
+      width: 65px;
+      height: 65px;
+      margin-bottom: 5px;
+      border: 3px solid @colorBg;
+      border-radius: 50%;
+      text-align: center;
+
+      @media (min-width: @breakpointMedium) {
+        width: 11vw;
+        height: 11vw;
+        margin-bottom: 1vh;
+        border-width: 4px;
+      }
+
+      @media (min-width: @breakpointLarge) {
+        width: 120px;
+        height: 120px;
+        border-width: 4px;
+      }
+
+      .icon {
+        .icon(30px);
+        .center-vertically;
+
+        @media (min-width: @breakpointMedium) {
+          .icon(4.5vw);
+        }
+
+        @media (min-width: @breakpointLarge) {
+          .icon(40px);
+        }
+      }
+    }
+
+    .link-label {
+      display: block;
+      text-transform: uppercase;
+      font-weight: normal;
+      font-size: .8rem;
+      line-height: 1.2;
+
+      @media (min-width: @breakpointMedium) {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+#header {
+  position: relative;
   min-height: 100vh;
   padding-top: 15vh;
   text-align: center;
   line-height: 1.8;
-  color: @gradientFg;
 
-  a {
-    color: @gradientLink;
-  }
-
-  @media screen and (max-height: 350px) {
+  @media (max-height: 350px) {
     padding-top: 15vh;
   }
 
   .logo {
     display: block;
-    margin: 0 auto 5vh;
+    margin: 0 auto 3vh;
     width: 100%;
     max-width: 1200px;
     max-height: 35vh;
+    min-width: 460px;
+
+    @media (max-width: @breakpointMedium) {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .event-meta {
+    font-weight: bold;
+    line-height: 1;
+    font-size: 1.2rem;
+    color: @colorGerman;
+
+    @media (min-width: @breakpointMedium) {
+      font-size: 1.6rem;
+    }
   }
 
   .calendar {
+    margin-bottom: 5vh;
+
     .addthisevent-drop {
       font-family: @fontFamily;
+      background-color: transparent;
+      border: 0;
     }
     .addthisevent_dropdown .copyx {
       display: none;
     }
   }
 
+  .more {
+    .icon(20px);
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: .2;
+    display: none;
+
+    @media (min-height: 600px) {
+      display: block;
+    }
+  }
+}
+
+#program {
+  color: @colorFrench;
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  time {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    .grid-box {
+      flex: 1 0;
+      padding-bottom: 12px;
+      flex-basis: 100%;
+
+      @media (min-width: @breakpointMedium) {
+        flex-basis: 50%;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+    }
+  }
+
+  .video {
+    position: relative;
+    padding-bottom: (900%/16);
+    background-color: @colorBg;
+
+    iframe, .placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .placeholder {
+      text-align: center;
+
+      .placeholder-text {
+        .center-vertically;
+        color: @colorFg;
+      }
+    }
+  }
+}
+
+#support {
+  text-align: center;
+
   .donation {
     width: 450px;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding: 20px;
   }
 }
 
 #footer {
   padding: 12px;
   text-align: center;
-  color: @gradientLink;
+  color: @colorLink;
 
   a {
-    color: @gradientLink;
+    color: @colorLink;
     text-decoration: none;
   }
 }
+
+
+
