@@ -1,21 +1,7 @@
 @import (less) "../bower_components/.dist/bower.css";
-@import (less) "mixins.less";
+@import (less) "variables.less";
+@import (less) "helpers.less";
 @import (less) "icon.less";
-
-@breakpointMedium: 600px;
-
-@gradientTurquoise: #00CEBA;
-@gradientOrchid: #B383B7;
-
-@colorGerman: white;
-@colorFrench: #300033;
-
-@colorBg: white;
-@colorFg: @colorFrench;
-@colorLink: #ffd583;
-
-@fontSize: 14px;
-@fontFamily: Helvetica, Arial, sans-serif;
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -45,11 +31,25 @@ ul {
 h1 {
   text-align: center;
   text-transform: uppercase;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
+
+  @media (min-width: @breakpointSmall) {
+    font-size: 1.4rem;
+  }
+
+  @media (min-width: @breakpointMedium) {
+    font-size: 1.8rem;
+  }
 
   span {
     margin: 0 2px;
   }
+}
+
+section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 12px;
 }
 
 .german {
@@ -81,14 +81,19 @@ h1 {
       width: 65px;
       height: 65px;
       margin-bottom: 5px;
-      border: 3px solid @colorFg;
+      border: 3px solid @colorBg;
       border-radius: 50%;
       text-align: center;
+
+      @media (min-width: @breakpointSmall) {
+        border-width: 4px;
+      }
 
       @media (min-width: @breakpointMedium) {
         width: 12vw;
         height: 12vw;
         margin-bottom: 1vh;
+        border-width: 5px;
       }
 
       .icon {
@@ -96,7 +101,7 @@ h1 {
         .center-vertically;
 
         @media (min-width: @breakpointMedium) {
-          .icon(4vw);
+          .icon(4.5vw);
         }
       }
     }
@@ -132,8 +137,13 @@ h1 {
   .event-meta {
     font-weight: bold;
     line-height: 1;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     color: @colorGerman;
+
+    @media(min-width: @breakpointMedium) {
+      font-size: 1.6rem;
+
+    }
   }
 
   .calendar {
@@ -148,10 +158,66 @@ h1 {
       display: none;
     }
   }
+}
 
+#program {
+  color: @colorFrench;
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  time {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    .grid-box {
+      flex: 1 0;
+      padding-bottom: 12px;
+      flex-basis: 100%;
+
+      @media (min-width: @breakpointMedium) {
+        flex-basis: 50%;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+    }
+  }
+
+  .video {
+    position: relative;
+    padding-bottom: (900%/16);
+
+    iframe, .placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .placeholder {
+      background-color: @colorBg;
+      text-align: center;
+
+      .placeholder-text {
+        .center-vertically;
+        color: @colorFg;
+      }
+    }
+  }
 }
 
 #support {
+  text-align: center;
+
   .donation {
     width: 450px;
     max-width: 100%;
