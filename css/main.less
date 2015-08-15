@@ -1,12 +1,17 @@
 @import (less) "../bower_components/.dist/bower.css";
-
-@colorBg: white;
-@colorFg: #4D4D4D;
+@import (less) "mixins.less";
+@import (less) "icon.less";
 
 @gradientTurquoise: #00CEBA;
 @gradientOrchid: #B383B7;
 @gradientFg: white;
 @gradientLink: #ffd583;
+
+@colorGerman: white;
+@colorFrench: #300033;
+
+@colorBg: white;
+@colorFg: @colorFrench;
 
 @fontSize: 14px;
 @fontFamily: Helvetica, Arial, sans-serif;
@@ -26,6 +31,71 @@ body {
   background-image: linear-gradient(30deg, @gradientTurquoise 0%, @gradientOrchid 80%);
 }
 
+a {
+  text-decoration: none;
+}
+
+.german {
+  color: @colorGerman;
+}
+
+.french {
+  color: @colorFrench;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 1vh;
+  width: 100%;
+  max-width: 1200px;
+  max-height: 35vh;
+}
+
+.event-meta {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+#navigation {
+  padding: 20px 12px;
+
+  .menu {
+    li {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 8px;
+    }
+  }
+
+  .link {
+    display: block;
+    text-align: center;
+
+    .link-circle {
+      display: inline-block;
+      width: 65px;
+      height: 65px;
+      margin-bottom: 5px;
+      border: 3px solid @colorFg;
+      border-radius: 50%;
+      text-align: center;
+
+      .icon {
+        .icon(30px);
+        .center-vertically;
+      }
+    }
+
+    .link-label {
+      display: block;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: .8rem;
+      line-height: 1.2;
+    }
+  }
+}
+
 #splash {
   min-height: 100vh;
   padding-top: 15vh;
@@ -41,13 +111,7 @@ body {
     padding-top: 15vh;
   }
 
-  .logo {
-    display: block;
-    margin: 0 auto 5vh;
-    width: 100%;
-    max-width: 1200px;
-    max-height: 35vh;
-  }
+
 
   .calendar {
     .addthisevent-drop {
@@ -77,3 +141,6 @@ body {
     text-decoration: none;
   }
 }
+
+
+
