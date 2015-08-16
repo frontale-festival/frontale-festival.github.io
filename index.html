@@ -17,23 +17,22 @@ layout: default
       <span class="date_format">DD/MM/YYYY</span>
     </div>
   </div>
-
   <nav id="navigation">
     <ul class="menu">
       <li>
         <a class="link" href="#program">
           <span class="link-circle"><span class="icon icon-music"></span></span>
           <span class="link-label german">Programm</span>
-          <span class="link-label french">Programmation</span>
+          <span class="link-label french">Programme</span>
         </a>
       </li>
-      <!--<li>-->
-        <!--<a class="link" href="#location">-->
-          <!--<span class="link-circle"><span class="icon icon-location"></span></span>-->
-          <!--<span class="link-label german">Lageplan</span>-->
-          <!--<span class="link-label french">Location</span>-->
-        <!--</a>-->
-      <!--</li>-->
+      <li>
+        <a class="link" href="#location">
+          <span class="link-circle"><span class="icon icon-location"></span></span>
+          <span class="link-label german">Lageplan</span>
+          <span class="link-label french">Location</span>
+        </a>
+      </li>
       <li>
         <a class="link" href="#support">
           <span class="link-circle"><span class="icon icon-like"></span></span>
@@ -53,7 +52,6 @@ layout: default
           <span class="link-circle"><span class="icon icon-facebook"></span></span>
           <span class="link-label german">Facebook</span>
           <span class="link-label french">Facebook</span>
-
         </a>
       </li>
     </ul>
@@ -62,7 +60,7 @@ layout: default
 </header>
 
 <section id="program" class="section">
-  <h1><span class="german">Programm</span><span class="french">Programmation</span></h1>
+  <h1><span class="german">Programm</span><span class="french">Programme</span></h1>
   <div class="grid">
     <div class="grid-box">
       <h2>DMP Crew</h2>
@@ -98,21 +96,44 @@ layout: default
     </div>
   </div>
   <div class="program-addendum">
-    <span class="german">Programmänderungen vorbehalten</span> <span class="french">Horaires et programmation sous réserve de modications</span>
-
+    <span class="german">Programmänderungen vorbehalten</span> <span class="french">Horaires et programmation sous réserve de modifications</span>
     <div class="admission"><span class="german">Freier Eintritt</span> <span class="french">Entrée libre</span></div>
     <!--<h2>Afterparty</h2>-->
   </div>
 </section>
 
-
+<section id="location" class="section">
+  <h1><span class="german">Lageplan</span><span class="french">Location</span></h1>
+  <div class="grid">
+    <div class="grid-box map">
+      <a class="map-link" href="https://goo.gl/maps/NbvbC">
+      {% include_relative img/map.svg %}
+      <span>Google Maps</span>
+      </a>
+    </div>
+    <div class="grid-box">
+      <div class="article">
+        <h3><span class="german">Öffentlicher Verkehr</span> <span class="french">Transport Public</span></h3>
+        <div class="commute">
+          <p class="french">Station Kaserne: <span class="italic">Tram 8, 17</span></p>
+          <p class="french">Station Rheingasse: <span class="italic">Tram 6, 8, 14, 15, 17 | Bus 31, 34, 38</span></p>
+        </div>
+        <p>
+          <span class="german">Fahrplaninformationen</span>
+          <span class="french">Informations sur les horaires: <a href="http://www.bvb.ch/fahrplan-netz/online-fahrplan">BVB</a></span>
+        </p>
+        <h3><span class="german">Mit dem Auto</span> <span class="french">Avec la voiture</span></h3>
+        <p class="german">Das Festival befindet sich in der autofreien Zone und stellt keine Parkmöglichkeiten zur Verfügung. Wir empfehlen das nahegelegene
+          <a href="https://goo.gl/maps/FHVrl">Claramatte</a> Parkhaus.</p>
+        <p class="french">le festival se situe dans une zone piétonne et n'offre aucune possibilité de stationnement. un parking couvert (<a href="https://goo.gl/maps/FHVrl">Claramatte</a>) se trouve à proximité.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="support" class="section">
   <h1><span class="german">Spenden</span><span class="french">Dons</span></h1>
-
-  <!--<span class="german">Gratis</span><span class="french">Gratuit</span>-->
-
-  <div class="donation">
+  <div class="article">
     <p><span class="german">Besten Dank für Ihre Unterstützung!</span> <span class="french">Merci de votre générosité!</span></p>
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
       <input type="hidden" name="cmd" value="_s-xclick">

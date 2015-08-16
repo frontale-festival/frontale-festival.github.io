@@ -10,8 +10,9 @@
 html {
   font-family: @fontFamily;
   font-size: @fontSize;
-  font-weight: 300;
+  font-weight: 400;
   color: @colorFg;
+  line-height: 1.4;
 }
 
 body {
@@ -29,6 +30,7 @@ ul {
 }
 
 h1 {
+  margin-bottom: 1.6em;
   text-align: center;
   text-transform: uppercase;
   font-size: 1.2rem;
@@ -56,6 +58,24 @@ h2 {
   @media (min-width: @breakpointSmall) {
     font-size: 1.4rem;
   }
+}
+
+h3 {
+  margin-top: 1.5em;
+  margin-bottom: .5em;
+  font-size: 1.05rem;
+
+  @media (min-width: @breakpointSmall) {
+    font-size: 1.1rem;
+  }
+}
+
+h4 {
+  margin-bottom: .2em;
+}
+
+p {
+  margin-top: 0;
 }
 
 .section {
@@ -232,23 +252,6 @@ h2 {
     font-weight: normal;
   }
 
-  .grid {
-    display: flex;
-    flex-wrap: wrap;
-
-    .grid-box {
-      flex: 1 0;
-      padding-bottom: 12px;
-      flex-basis: 100%;
-
-      @media (min-width: @breakpointMedium) {
-        flex-basis: 50%;
-        padding-left: 12px;
-        padding-right: 12px;
-      }
-    }
-  }
-
   .video {
     position: relative;
     padding-bottom: (900%/16);
@@ -284,15 +287,28 @@ h2 {
   }
 }
 
+#location {
+  .map {
+    text-align: center;
+
+    .map-link {
+      display: block;
+      width: 300px;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  .commute {
+    margin-bottom: 1em;
+    p {
+      margin: 0;
+    }
+  }
+}
+
 #support {
   text-align: center;
-
-  .donation {
-    width: 450px;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 
 #footer {
