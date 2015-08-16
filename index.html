@@ -3,8 +3,7 @@ layout: default
 ---
 
 <header id="header">
-  <img class="logo" src="/img/header.svg" alt="Frontâle">
-
+	{% include_relative img/header.svg %}
   <div class="event-meta">19.9.2015 | Klingental | 16:00h<span class="icon icon-calendar"></span></div>
   <div class="calendar">
     <div title="Add to Calendar" class="addthisevent">
@@ -25,7 +24,7 @@ layout: default
         <a class="link" href="#program">
           <span class="link-circle"><span class="icon icon-music"></span></span>
           <span class="link-label german">Programm</span>
-          <span class="link-label french">Programme</span>
+          <span class="link-label french">Programmation</span>
         </a>
       </li>
       <!--<li>-->
@@ -53,6 +52,8 @@ layout: default
         <a class="link" href="https://www.facebook.com/frontalefestival">
           <span class="link-circle"><span class="icon icon-facebook"></span></span>
           <span class="link-label german">Facebook</span>
+          <span class="link-label french">Facebook</span>
+
         </a>
       </li>
     </ul>
@@ -60,9 +61,8 @@ layout: default
   <span class="more icon icon-arrow-down"></span>
 </header>
 
-<section id="program">
-  <h1><span class="german">Programm</span><span class="french">Programme</span></h1>
-
+<section id="program" class="section">
+  <h1><span class="german">Programm</span><span class="french">Programmation</span></h1>
   <div class="grid">
     <div class="grid-box">
       <h2>DMP Crew</h2>
@@ -97,18 +97,23 @@ layout: default
       <!--</div>-->
     </div>
   </div>
-  <!--<h2>Afterparty</h2>-->
+  <div class="program-addendum">
+    <span class="german">Programmänderungen vorbehalten</span> <span class="french">Horaires et programmation sous réserve de modications</span>
+
+    <div class="admission"><span class="german">Freier Eintritt</span> <span class="french">Entrée libre</span></div>
+    <!--<h2>Afterparty</h2>-->
+  </div>
 </section>
 
 
 
-<section id="support">
+<section id="support" class="section">
   <h1><span class="german">Spenden</span><span class="french">Dons</span></h1>
 
   <!--<span class="german">Gratis</span><span class="french">Gratuit</span>-->
 
   <div class="donation">
-    <p>Besten Dank für Ihre Unterstützung! - Merci de votre générosité!</p>
+    <p><span class="german">Besten Dank für Ihre Unterstützung!</span> <span class="french">Merci de votre générosité!</span></p>
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
       <input type="hidden" name="cmd" value="_s-xclick">
       <input type="hidden" name="hosted_button_id" value="H5ZD385B8PNPJ">
@@ -116,7 +121,7 @@ layout: default
       <img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
     </form>
     <p>
-      <small>Oder via Postkonto: 61-122969-4 - IBAN: CH24 0900 0000 6112 2969 4<br> Verein Frontâle - Untere Rebgasse 22 - 4058 Basel</small>
+      <small>Oder via Postkonto: 61-122969-4 - IBAN: <span class="noWrap">CH24 0900 0000 6112 2969 4</span><br> Verein Frontâle - Untere Rebgasse 22 - 4058 Basel</small>
     </p>
   </div>
 </section>

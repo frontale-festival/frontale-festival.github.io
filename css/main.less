@@ -1,6 +1,6 @@
 @import (less) "../bower_components/.dist/bower.css";
 @import (less) "variables.less";
-@import (less) "mixins.less";
+@import (less) "helpers.less";
 @import (less) "icon.less";
 
 *, *:before, *:after {
@@ -42,7 +42,7 @@ h1 {
   }
 
   span {
-    margin: 0 2px;
+    padding: 0 2px;
   }
 }
 
@@ -58,7 +58,7 @@ h2 {
   }
 }
 
-section {
+.section {
   max-width: 900px;
   margin: 0 auto 6vh;
   padding: 12px;
@@ -73,13 +73,13 @@ section {
 }
 
 #navigation {
-  padding: 20px 12px;
+  padding: 20px 7px;
 
   .menu {
     li {
       display: inline-block;
       vertical-align: top;
-      margin: 0 8px;
+      margin: 0 1vw;
     }
   }
 
@@ -87,11 +87,20 @@ section {
     display: block;
     text-align: center;
     margin-bottom: 12px;
+    width: 90px;
+
+    @media (min-width: @breakpointMedium) {
+      width: 18vw;
+    }
+
+    @media (min-width: @breakpointLarge) {
+      width: 140px;
+    }
 
     .link-circle {
       display: inline-block;
-      width: 65px;
-      height: 65px;
+      width: 70px;
+      height: 70px;
       margin-bottom: 5px;
       border: 3px solid @colorBg;
       border-radius: 50%;
@@ -128,8 +137,13 @@ section {
       display: block;
       text-transform: uppercase;
       font-weight: normal;
-      font-size: .8rem;
+      font-size: .7rem;
       line-height: 1.2;
+      .ellipsis;
+
+      @media (min-width: @breakpointMedium) {
+        font-size: .8rem;
+      }
 
       @media (min-width: @breakpointMedium) {
         font-size: 1rem;
@@ -140,6 +154,7 @@ section {
 
 #header {
   position: relative;
+  overflow: hidden;
   min-height: 100vh;
   padding-top: 15vh;
   text-align: center;
@@ -254,6 +269,17 @@ section {
         .center-vertically;
         color: @colorFg;
       }
+    }
+  }
+
+  .program-addendum {
+    padding: 20px;
+    text-align: center;
+
+    .admission {
+      font-size: 1.5rem;
+      font-style: italic;
+      padding: 20px 0;
     }
   }
 }

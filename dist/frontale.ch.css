@@ -353,6 +353,15 @@ td,
 th {
   padding: 0;
 }
+.noWrap {
+  white-space: nowrap;
+}
+.ellipsis {
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .icon-arrow-down {
   background-image: url('/img/icon/arrow-down.svg');
 }
@@ -415,7 +424,7 @@ h1 {
   }
 }
 h1 span {
-  margin: 0 2px;
+  padding: 0 2px;
 }
 h2 {
   font-size: 1.1rem;
@@ -430,7 +439,7 @@ h2 {
     font-size: 1.4rem;
   }
 }
-section {
+.section {
   max-width: 900px;
   margin: 0 auto 6vh;
   padding: 12px;
@@ -442,22 +451,33 @@ section {
   color: #300033;
 }
 #navigation {
-  padding: 20px 12px;
+  padding: 20px 7px;
 }
 #navigation .menu li {
   display: inline-block;
   vertical-align: top;
-  margin: 0 8px;
+  margin: 0 1vw;
 }
 #navigation .link {
   display: block;
   text-align: center;
   margin-bottom: 12px;
+  width: 90px;
+}
+@media (min-width: 600px) {
+  #navigation .link {
+    width: 18vw;
+  }
+}
+@media (min-width: 1000px) {
+  #navigation .link {
+    width: 140px;
+  }
 }
 #navigation .link .link-circle {
   display: inline-block;
-  width: 65px;
-  height: 65px;
+  width: 70px;
+  height: 70px;
   margin-bottom: 5px;
   border: 3px solid #300033;
   border-radius: 50%;
@@ -508,8 +528,17 @@ section {
   display: block;
   text-transform: uppercase;
   font-weight: normal;
-  font-size: .8rem;
+  font-size: .7rem;
   line-height: 1.2;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@media (min-width: 600px) {
+  #navigation .link .link-label {
+    font-size: .8rem;
+  }
 }
 @media (min-width: 600px) {
   #navigation .link .link-label {
@@ -518,6 +547,7 @@ section {
 }
 #header {
   position: relative;
+  overflow: hidden;
   min-height: 100vh;
   padding-top: 15vh;
   text-align: center;
@@ -644,6 +674,15 @@ section {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   color: white;
+}
+#program .program-addendum {
+  padding: 20px;
+  text-align: center;
+}
+#program .program-addendum .admission {
+  font-size: 1.5rem;
+  font-style: italic;
+  padding: 20px 0;
 }
 #support {
   text-align: center;
