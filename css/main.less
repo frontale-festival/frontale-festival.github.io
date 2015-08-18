@@ -58,6 +58,10 @@ h2 {
   @media (min-width: @breakpointSmall) {
     font-size: 1.4rem;
   }
+
+  span {
+    padding: 0 2px;
+  }
 }
 
 h3 {
@@ -76,6 +80,10 @@ h4 {
 
 p {
   margin-top: 0;
+}
+
+article {
+  margin-bottom: 4vh;
 }
 
 .section {
@@ -306,6 +314,16 @@ p {
 
 #support {
   text-align: center;
+
+  .support-link {
+    display: inline-block;
+    vertical-align: top;
+    width: 100px;
+
+    img {
+      max-width: 100%;
+    }
+  }
 }
 
 #footer {
