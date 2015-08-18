@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  background-image: linear-gradient(30deg, @gradientTurquoise 0%, @gradientOrchid 80%);
+  background-image: linear-gradient(30deg, @gradientOrchid 0%, @gradientTurquoise 30%, @gradientOrchid 90%);
 }
 
 a {
@@ -83,13 +83,21 @@ p {
 }
 
 article {
-  margin-bottom: 4vh;
+  margin: 0 auto 4vh;
+
+  h2 {
+    text-align: center;
+  }
+
+  &.justify p {
+    text-align: justify;
+  }
 }
 
 .section {
   max-width: 900px;
   margin: 0 auto 6vh;
-  padding: 12px;
+  padding: 12px 5vw;
 }
 
 .german {
@@ -113,16 +121,12 @@ article {
 
   .link {
     display: block;
-    text-align: center;
+    width: 22vw;
     margin-bottom: 12px;
-    width: 90px;
+    text-align: center;
 
-    @media (min-width: @breakpointMedium) {
-      width: 18vw;
-    }
-
-    @media (min-width: @breakpointLarge) {
-      width: 140px;
+    @media (min-width: 430px) {
+      width: auto;
     }
 
     .link-circle {
@@ -240,7 +244,7 @@ article {
     opacity: .2;
     display: none;
 
-    @media (min-height: 600px) {
+    @media (min-height: 700px) and (min-width: @breakpointMedium) {
       display: block;
     }
   }
