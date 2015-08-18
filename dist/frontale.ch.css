@@ -374,21 +374,18 @@ th {
           flex-wrap: wrap;
 }
 .grid .grid-box {
-  -webkit-flex: 1 0;
-      -ms-flex: 1 0;
-          flex: 1 0;
+  width: 100%;
   padding-bottom: 12px;
-  -webkit-flex-basis: 100%;
-      -ms-flex-preferred-size: 100%;
-          flex-basis: 100%;
 }
 @media (min-width: 600px) {
   .grid .grid-box {
-    -webkit-flex-basis: 50%;
-        -ms-flex-preferred-size: 50%;
-            flex-basis: 50%;
-    padding-left: 12px;
+    width: 50%;
+  }
+  .grid .grid-box:nth-child(odd) {
     padding-right: 12px;
+  }
+  .grid .grid-box:nth-child(even) {
+    padding-left: 12px;
   }
 }
 .article {
@@ -418,6 +415,12 @@ th {
 .icon-location {
   background-image: url('/img/icon/location.svg');
 }
+.icon-madeinbasel {
+  background-image: url('/img/icon/madeinbasel.svg');
+}
+.icon-message {
+  background-image: url('/img/icon/message.svg');
+}
 .icon-music {
   background-image: url('/img/icon/music.svg');
 }
@@ -434,7 +437,7 @@ html {
   line-height: 1.4;
 }
 body {
-  background-image: linear-gradient(30deg, #00ceba 0%, #b383b7 80%);
+  background-image: linear-gradient(30deg, #b383b7 0%, #09b2b9 30%, #b383b7 90%);
 }
 a {
   text-decoration: none;
@@ -496,12 +499,18 @@ p {
   margin-top: 0;
 }
 article {
-  margin-bottom: 4vh;
+  margin: 0 auto 4vh;
+}
+article h2 {
+  text-align: center;
+}
+article.justify p {
+  text-align: justify;
 }
 .section {
   max-width: 900px;
   margin: 0 auto 6vh;
-  padding: 12px;
+  padding: 12px 5vw;
 }
 .german {
   color: white;
@@ -509,28 +518,25 @@ article {
 .french {
   color: #300033;
 }
+.menu li {
+  display: inline-block;
+  vertical-align: top;
+}
 #navigation {
   padding: 20px 7px;
 }
 #navigation .menu li {
-  display: inline-block;
-  vertical-align: top;
   margin: 0 1vw;
 }
 #navigation .link {
   display: block;
-  text-align: center;
+  width: 22vw;
   margin-bottom: 12px;
-  width: 90px;
+  text-align: center;
 }
-@media (min-width: 600px) {
+@media (min-width: 430px) {
   #navigation .link {
-    width: 18vw;
-  }
-}
-@media (min-width: 1000px) {
-  #navigation .link {
-    width: 140px;
+    width: auto;
   }
 }
 #navigation .link .link-circle {
@@ -668,7 +674,7 @@ article {
   opacity: .2;
   display: none;
 }
-@media (min-height: 600px) {
+@media (min-height: 700px) and (min-width: 600px) {
   #header .more {
     display: block;
   }
@@ -740,6 +746,18 @@ article {
   padding: 12px;
   text-align: center;
   color: #ffd583;
+}
+#footer .footer-menu .link {
+  display: block;
+  padding: 7px;
+  text-align: center;
+  opacity: .5;
+}
+#footer .footer-menu .icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
 }
 #footer a {
   color: #ffd583;
