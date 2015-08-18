@@ -108,13 +108,18 @@ article {
   color: @colorFrench;
 }
 
+.menu {
+  li {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
 #navigation {
   padding: 20px 7px;
 
   .menu {
     li {
-      display: inline-block;
-      vertical-align: top;
       margin: 0 1vw;
     }
   }
@@ -334,6 +339,19 @@ article {
   padding: 12px;
   text-align: center;
   color: @colorLink;
+
+  .footer-menu {
+    .link {
+      display: block;
+      padding: 7px;
+      text-align: center;
+      opacity: .5;
+    }
+
+    .icon {
+      .icon(30px);
+    }
+  }
 
   a {
     color: @colorLink;
