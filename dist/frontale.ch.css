@@ -759,13 +759,18 @@ article.justify p {
   background-color: white;
   padding: 7px;
 }
+#support .payment .payment-method.paypal input[type=image] {
+  width: auto;
+  height: 100%;
+}
 #support .support-link {
   display: inline-block;
   vertical-align: top;
   width: 100px;
 }
 #support .support-link img {
-  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 #footer {
   padding: 12px;
