@@ -98,6 +98,11 @@ article {
   max-width: 900px;
   margin: 0 auto 6vh;
   padding: 12px 5vw;
+
+  @media (min-width: 1000px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .german {
@@ -324,13 +329,41 @@ article {
 #support {
   text-align: center;
 
+  .payment {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+
+    .payment-method {
+      display: inline-block;
+      height: 50px;
+      margin-bottom: 5px;
+      vertical-align: top;
+
+      img, input[type=image] {
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      &.paypal {
+        background-color: white;
+        padding: 7px;
+
+        input[type=image] {
+          width: auto;
+          height: 100%;
+        }
+      }
+    }
+  }
+
   .support-link {
     display: inline-block;
     vertical-align: top;
     width: 100px;
 
     img {
-      max-width: 100%;
+      width: 100%;
+      height: auto;
     }
   }
 }

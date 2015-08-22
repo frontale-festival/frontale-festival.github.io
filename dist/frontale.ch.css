@@ -512,6 +512,12 @@ article.justify p {
   margin: 0 auto 6vh;
   padding: 12px 5vw;
 }
+@media (min-width: 1000px) {
+  .section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 .german {
   color: white;
 }
@@ -734,13 +740,37 @@ article.justify p {
 #support {
   text-align: center;
 }
+#support .payment {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+#support .payment .payment-method {
+  display: inline-block;
+  height: 50px;
+  margin-bottom: 5px;
+  vertical-align: top;
+}
+#support .payment .payment-method img,
+#support .payment .payment-method input[type=image] {
+  max-width: 100%;
+  max-height: 100%;
+}
+#support .payment .payment-method.paypal {
+  background-color: white;
+  padding: 7px;
+}
+#support .payment .payment-method.paypal input[type=image] {
+  width: auto;
+  height: 100%;
+}
 #support .support-link {
   display: inline-block;
   vertical-align: top;
   width: 100px;
 }
 #support .support-link img {
-  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 #footer {
   padding: 12px;
