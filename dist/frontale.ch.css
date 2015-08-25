@@ -765,12 +765,13 @@ article.justify p {
 }
 #support .support-link {
   display: inline-block;
+  margin: 5px;
+  height: 80px;
   vertical-align: top;
-  width: 100px;
 }
 #support .support-link img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
 }
 #footer {
   padding: 12px;
