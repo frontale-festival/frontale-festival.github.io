@@ -683,7 +683,7 @@ article.justify p {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  opacity: .2;
+  opacity: .1;
   display: none;
 }
 @media (min-height: 700px) and (min-width: 600px) {
@@ -735,7 +735,7 @@ article.justify p {
   display: inline-block;
 }
 #program .slot-head .link-more:not(.active) {
-  opacity: .2;
+  opacity: .3;
 }
 #program .slot-head .link-more:not(.active) .icon-plus {
   display: inline-block;
