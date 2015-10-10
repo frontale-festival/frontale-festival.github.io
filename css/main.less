@@ -122,6 +122,7 @@ article {
 
 #navigation {
   padding: 20px 7px;
+  text-align: center;
 
   .menu {
     li {
@@ -198,7 +199,7 @@ article {
   position: relative;
   overflow: hidden;
   min-height: 100vh;
-  padding-top: 15vh;
+  padding-top: 8vh;
   text-align: center;
   line-height: 1.8;
 
@@ -211,7 +212,7 @@ article {
     margin: 0 auto 3vh;
     width: 100%;
     max-width: 1200px;
-    max-height: 35vh;
+    max-height: 30vh;
     min-width: 460px;
 
     @media (max-width: @breakpointMedium) {
@@ -219,6 +220,11 @@ article {
       left: 50%;
       transform: translateX(-50%);
     }
+  }
+
+  .teaser {
+    max-width: 700px;
+    margin: 0 auto;
   }
 
   .more {
@@ -238,11 +244,6 @@ article {
 
 #program {
   color: @colorFrench;
-
-  .event-meta {
-    color: @colorGerman;
-    text-align: center;
-  }
 
   .slot-head {
     position: relative;
@@ -309,20 +310,6 @@ article {
 
     > div {
       padding: 5px 0;
-    }
-  }
-
-  .slot-teaser {
-    position: relative;
-    padding-bottom: (900%/16);
-    background-color: @colorBg;
-
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
     }
   }
 
