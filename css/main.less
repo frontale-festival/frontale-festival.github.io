@@ -221,30 +221,6 @@ article {
     }
   }
 
-  .event-meta {
-    font-weight: bold;
-    line-height: 1;
-    font-size: 1.2rem;
-    color: @colorGerman;
-
-    @media (min-width: @breakpointMedium) {
-      font-size: 1.6rem;
-    }
-  }
-
-  .calendar {
-    margin-bottom: 5vh;
-
-    .addthisevent-drop {
-      font-family: @fontFamily;
-      background-color: transparent;
-      border: 0;
-    }
-    .addthisevent_dropdown .copyx {
-      display: none;
-    }
-  }
-
   .more {
     .icon(20px);
     position: absolute;
@@ -262,6 +238,11 @@ article {
 
 #program {
   color: @colorFrench;
+
+  .event-meta {
+    color: @colorGerman;
+    text-align: center;
+  }
 
   .slot-head {
     position: relative;
