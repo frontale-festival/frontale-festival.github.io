@@ -49,6 +49,7 @@ h1 {
 }
 
 h2 {
+  text-align: center;
   font-size: 1.1rem;
 
   @media (min-width: @breakpointSmall) {
@@ -122,6 +123,7 @@ article {
 
 #navigation {
   padding: 20px 7px;
+  text-align: center;
 
   .menu {
     li {
@@ -198,7 +200,7 @@ article {
   position: relative;
   overflow: hidden;
   min-height: 100vh;
-  padding-top: 15vh;
+  padding-top: 8vh;
   text-align: center;
   line-height: 1.8;
 
@@ -211,7 +213,7 @@ article {
     margin: 0 auto 3vh;
     width: 100%;
     max-width: 1200px;
-    max-height: 35vh;
+    max-height: 30vh;
     min-width: 460px;
 
     @media (max-width: @breakpointMedium) {
@@ -221,28 +223,10 @@ article {
     }
   }
 
-  .event-meta {
-    font-weight: bold;
-    line-height: 1;
-    font-size: 1.2rem;
-    color: @colorGerman;
-
-    @media (min-width: @breakpointMedium) {
-      font-size: 1.6rem;
-    }
-  }
-
-  .calendar {
-    margin-bottom: 5vh;
-
-    .addthisevent-drop {
-      font-family: @fontFamily;
-      background-color: transparent;
-      border: 0;
-    }
-    .addthisevent_dropdown .copyx {
-      display: none;
-    }
+  .teaser {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 5vw;
   }
 
   .more {
@@ -268,6 +252,7 @@ article {
 
     h2 {
       margin-bottom: 0;
+      text-align: left;
     }
 
     .slot-time {
@@ -331,20 +316,6 @@ article {
     }
   }
 
-  .slot-teaser {
-    position: relative;
-    padding-bottom: (900%/16);
-    background-color: @colorBg;
-
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  }
-
   .program-addendum {
     padding: 20px;
     text-align: center;
@@ -353,6 +324,12 @@ article {
       font-size: 1.5rem;
       font-style: italic;
       padding: 20px 0;
+    }
+  }
+
+  .photo {
+    img {
+      max-width: 100%;
     }
   }
 }
