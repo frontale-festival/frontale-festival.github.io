@@ -214,11 +214,15 @@ article {
 
   .teaser {
     position: absolute;
-    width: 100%;
+    width: 120%;
     max-width: 1000px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    @media (min-width: @breakpointMedium) {
+      width: 100%;
+    }
   }
 
   .french {
