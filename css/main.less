@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  background-image: linear-gradient(30deg, @gradientOrchid 0%, @gradientTurquoise 30%, @gradientOrchid 90%);
+  background-color: @colorViolett;
 }
 
 a {
@@ -50,7 +50,7 @@ h1 {
 
 h2 {
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1rem;
 
   @media (min-width: @breakpointSmall) {
     font-size: 1.2rem;
@@ -84,8 +84,6 @@ p {
 }
 
 article {
-  margin: 0 auto 4vh;
-
   h2 {
     text-align: center;
   }
@@ -96,13 +94,18 @@ article {
 }
 
 .section {
-  max-width: 900px;
-  margin: 0 auto 6vh;
-  padding: 12px 5vw;
+  margin-bottom: 10vw;
+  padding: 35px 5vw;
+  border-top: 2px dashed fadeout(@colorFg, 90);
 
   @media (min-width: 1000px) {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .section-inner {
+    max-width: 900px;
+    margin: 0 auto;
   }
 }
 
@@ -122,7 +125,7 @@ article {
 }
 
 #navigation {
-  padding: 20px 7px;
+  padding: 10vw 7px 0;
   text-align: center;
 
   .menu {
@@ -146,14 +149,14 @@ article {
       width: 70px;
       height: 70px;
       margin-bottom: 5px;
-      border: 3px solid @colorBg;
+      border: 3px solid @colorFg;
       border-radius: 50%;
       text-align: center;
 
       @media (min-width: @breakpointMedium) {
         width: 11vw;
         height: 11vw;
-        margin-bottom: 1vh;
+        margin-bottom: 12px;
         border-width: 4px;
       }
 
@@ -197,36 +200,70 @@ article {
 }
 
 #header {
-  position: relative;
   overflow: hidden;
-  min-height: 100vh;
-  padding-top: 8vh;
   text-align: center;
   line-height: 1.8;
+  background-color: @colorYellow;
 
-  @media (max-height: 350px) {
-    padding-top: 15vh;
-  }
-
-  .logo {
-    display: block;
-    margin: 0 auto 3vh;
-    width: 100%;
-    max-width: 1200px;
-    max-height: 30vh;
-    min-width: 460px;
-
-    @media (max-width: @breakpointMedium) {
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+  .header-inner {
+    position: relative;
+    min-height: 100vh;
+    max-width: 1000px;
+    margin: 0 auto;
   }
 
   .teaser {
-    max-width: 700px;
-    margin: 0 auto;
+    position: absolute;
+    width: 100%;
+    max-width: 1000px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .french {
+    color: @colorViolett;
+  }
+
+  .countdown {
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
     padding: 0 5vw;
+
+    #countdown {
+      white-space: nowrap;
+      overflow: hidden;
+      background-color: fadeout(@colorViolett, 95);
+      color: @colorBg;
+      font-weight: bold;
+      text-align: center;
+      font-size: 18px;
+
+      @media (min-width: @breakpointMedium) {
+        font-size: 30px;
+      }
+
+      > div {
+        display: inline-block;
+        padding: 5px;
+        font-weight: bold;
+
+        @media (min-width: @breakpointMedium) {
+          padding: 10px;
+        }
+      }
+
+      .smalltext {
+        font-size: 10px;
+        font-weight: normal;
+        color: mix(@colorBg, @colorFg, 90);
+
+        @media (min-width: @breakpointMedium) {
+          font-size: 14px;
+        }
+      }
+    }
   }
 
   .more {
@@ -235,31 +272,19 @@ article {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    opacity: .1;
-    display: none;
-
-    @media (min-height: 700px) and (min-width: @breakpointMedium) {
-      display: block;
-    }
+    opacity: .4;
   }
 }
 
 #program {
-  color: @colorFrench;
+  color: @colorFg;
 
   .slot-head {
     position: relative;
 
     h2 {
-      margin-bottom: 0;
+      margin-bottom: 4px;
       text-align: left;
-    }
-
-    .slot-time {
-      display: block;
-      margin-bottom: 7px;
-      font-size: 1.2rem;
-      font-weight: normal;
     }
 
     .link-more {
@@ -343,6 +368,15 @@ article {
       width: 300px;
       max-width: 100%;
       margin: 0 auto;
+
+      .button {
+        display: inline-block;
+        padding: 0 20px;
+        border: 1px solid fadeout(@colorFg, 80);
+        border-radius: 18px;
+        line-height: 36px;
+        color: @colorFg;
+      }
     }
 
     .map-image {
@@ -361,11 +395,27 @@ article {
 }
 
 #support {
+  margin-bottom: 0;
+  background-color: white;
   text-align: center;
+  color: @colorViolett;
+
+
+  .french {
+    color: @colorYellow;
+  }
+
+  .german {
+    color: @colorViolett
+  }
+
+  .donation {
+    margin-bottom: 50px;
+  }
 
   .payment {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+    margin-top: 25px;
+    margin-bottom: 15px;
 
     .payment-method {
       display: inline-block;
@@ -393,7 +443,7 @@ article {
   .support-link {
     display: inline-block;
     margin: 5px;
-    height: 80px;
+    height: 70px;
     vertical-align: top;
 
     img {
@@ -406,7 +456,6 @@ article {
 #footer {
   padding: 12px;
   text-align: center;
-  color: @colorLink;
 
   .footer-menu {
     .link {
