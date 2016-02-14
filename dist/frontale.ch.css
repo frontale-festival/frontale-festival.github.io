@@ -490,12 +490,12 @@ h2 {
 }
 @media (min-width: 400px) {
   h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 @media (min-width: 400px) {
   h2 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 h2 span {
@@ -558,7 +558,7 @@ article.justify p {
 #navigation .link {
   display: block;
   width: 22vw;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   text-align: center;
 }
 @media (min-width: 430px) {
@@ -570,7 +570,7 @@ article.justify p {
   display: inline-block;
   width: 70px;
   height: 70px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   border: 3px solid white;
   border-radius: 50%;
   text-align: center;
@@ -680,6 +680,7 @@ article.justify p {
   font-weight: bold;
   text-align: center;
   font-size: 18px;
+  border-radius: 5px;
 }
 @media (min-width: 600px) {
   #header .countdown #countdown {
@@ -725,7 +726,8 @@ article.justify p {
   position: relative;
 }
 #program .slot-head h2 {
-  margin-bottom: 4px;
+  margin: 0;
+  line-height: 40px;
   text-align: left;
 }
 #program .slot-head .link-more {
