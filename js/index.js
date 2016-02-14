@@ -3,6 +3,8 @@ $(document).ready(function() {
     $(this).toggleClass('active');
     $(this).parent().next('.slot-more').slideToggle('fast');
   });
+
+  $('#header .header-inner').css({'min-height': $(window).height()});
 });
 
 function getTimeRemaining(endtime) {
