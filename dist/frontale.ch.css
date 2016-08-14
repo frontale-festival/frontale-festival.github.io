@@ -837,6 +837,9 @@ article.justify p {
 #location .commute p {
   margin: 0;
 }
+#organisation .dossier {
+  margin-bottom: 1em;
+}
 #support {
   margin-bottom: 0;
   background-color: white;
