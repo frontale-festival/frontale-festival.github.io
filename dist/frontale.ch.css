@@ -442,6 +442,9 @@ th {
 .icon-plus {
   background-image: url('/img/icon/plus.svg');
 }
+.icon-close {
+  background-image: url('/img/icon/close.svg');
+}
 *,
 *:before,
 *:after {
@@ -517,6 +520,9 @@ h4 {
 p {
   margin-top: 0;
 }
+img {
+  max-width: 100%;
+}
 article h2 {
   text-align: center;
 }
@@ -547,6 +553,14 @@ article.justify p {
 .menu li {
   display: inline-block;
   vertical-align: top;
+}
+.button {
+  display: inline-block;
+  padding: 0 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 18px;
+  line-height: 36px;
+  color: white;
 }
 #navigation {
   padding: 10vw 7px 0;
@@ -719,76 +733,105 @@ article.justify p {
           transform: translateX(-50%);
   opacity: .4;
 }
-#program {
-  color: white;
+#program.active #overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+#program #overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-color: rgba(48, 0, 51, 0.9);
+  opacity: 0;
+  transition: opacity 200ms;
+}
+#program .slot.active {
+  position: relative;
+  z-index: 1;
+}
+#program .slot.active .slot-head .icon {
+  display: block;
+}
+#program .slot.active .slot-head h2 .artist {
+  text-decoration: none;
 }
 #program .slot-head {
+  display: block;
+  padding-left: 18px;
+  padding-right: 18px;
   position: relative;
 }
-#program .slot-head h2 {
-  margin: 0;
-  line-height: 40px;
-  text-align: left;
-}
-#program .slot-head .link-more {
-  display: block;
+#program .slot-head .icon {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-}
-#program .slot-head .link-more .icon {
+  top: 5px;
+  right: 5px;
   display: inline-block;
   width: 18px;
   height: 18px;
   background-size: contain;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-#program .slot-head .link-more.active {
-  opacity: 1;
-}
-#program .slot-head .link-more.active .icon-plus {
   display: none;
 }
-#program .slot-head .link-more.active .icon-minus {
-  display: inline-block;
+@media (min-width: 400px) {
+  #program .slot-head .icon {
+    width: 30px;
+    height: 30px;
+  }
 }
-#program .slot-head .link-more:not(.active) {
-  opacity: .3;
+#program .slot-head h2 {
+  margin-bottom: 0;
+  font-size: 1.6em;
 }
-#program .slot-head .link-more:not(.active) .icon-plus {
-  display: inline-block;
+@media (min-width: 400px) {
+  #program .slot-head h2 {
+    font-size: 1.9em;
+  }
 }
-#program .slot-head .link-more:not(.active) .icon-minus {
-  display: none;
+@media (min-width: 600px) {
+  #program .slot-head h2 {
+    font-size: 3em;
+  }
+}
+#program .slot-head h2 .artist {
+  margin-right: .1em;
+  text-decoration: underline;
+}
+#program .slot-head h2 .origin {
+  font-size: .4em;
+  font-weight: normal;
 }
 #program .slot-more {
   display: none;
   margin-bottom: 12px;
 }
-#program .slot-more .origin {
-  margin-bottom: 0;
-  color: white;
+#program .slot-more .time {
+  padding: 15px;
+  text-align: center;
 }
-#program .slot-more > div {
-  padding: 5px 0;
+@media (min-width: 400px) {
+  #program .slot-more .time {
+    font-size: 1.5em;
+  }
 }
-#program .program-addendum {
+#program .slot-more .social {
+  padding: 15px;
+  text-align: center;
+}
+#program .history {
+  padding: 5px;
+  text-align: center;
+}
+.program-addendum {
+  margin-top: 30px;
   padding: 20px;
   text-align: center;
 }
-#program .program-addendum .admission {
+.program-addendum .admission {
   font-size: 1.5rem;
   font-style: italic;
   padding: 20px 0;
-}
-#program .photo img {
-  max-width: 100%;
 }
 #location .map {
   text-align: center;
@@ -798,14 +841,6 @@ article.justify p {
   width: 300px;
   max-width: 100%;
   margin: 0 auto;
-}
-#location .map .map-link .button {
-  display: inline-block;
-  padding: 0 20px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 18px;
-  line-height: 36px;
-  color: white;
 }
 #location .map .map-image {
   width: 100%;
@@ -884,5 +919,20 @@ article.justify p {
 #footer a {
   color: #ffbd37;
   text-decoration: none;
+}
+#program2015 {
+  color: white;
+}
+#program2015 .slot-head {
+  position: relative;
+}
+#program2015 .slot-head h2 {
+  margin: 0;
+  line-height: 40px;
+  text-align: left;
+}
+#program2015 .slot-head .origin {
+  margin-bottom: 0;
+  color: white;
 }
 /*# sourceMappingURL=frontale.ch.css.map */
