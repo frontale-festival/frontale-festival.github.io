@@ -1,6 +1,5 @@
 $(document).ready(function() {
   $('.toggleMore').on('click', function() {
-    $('#program').toggleClass('active');
     $(this).closest('.slot').toggleClass('active');
     $(this).next('.slot-more').slideToggle('fast');
   });
