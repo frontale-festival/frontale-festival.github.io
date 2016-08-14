@@ -733,21 +733,6 @@ article.justify p {
           transform: translateX(-50%);
   opacity: .4;
 }
-#program.active #overlay {
-  opacity: 1;
-  pointer-events: auto;
-}
-#program #overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  background-color: rgba(48, 0, 51, 0.9);
-  opacity: 0;
-  transition: opacity 200ms;
-}
 #program .slot.active {
   position: relative;
   z-index: 1;
