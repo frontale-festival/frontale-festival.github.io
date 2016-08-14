@@ -299,8 +299,10 @@ article {
   &.active {
     #overlay {
       opacity: 1;
+      pointer-events: auto;
     }
   }
+
   #overlay {
     position: fixed;
     top: 0;
@@ -316,10 +318,38 @@ article {
   .slot.active {
     position: relative;
     z-index: 1;
+
+    .slot-head {
+      .icon {
+        display: block;
+      }
+
+      h2 {
+        .artist {
+          text-decoration: none;
+        }
+      }
+    }
   }
 
   .slot-head {
     display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+
+    .icon {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      .icon(15px);
+      display: none;
+
+      @media (min-width: @breakpointSmall) {
+        width: 30px;
+        height: 30px;
+      }
+    }
 
     h2 {
       margin-bottom: 0;
@@ -352,7 +382,11 @@ article {
     .time {
       padding: 15px;
       text-align: center;
-      font-size: 1.5em;
+
+      @media (min-width: @breakpointSmall) {
+        font-size: 1.5em;
+      }
+
     }
 
     .social {
