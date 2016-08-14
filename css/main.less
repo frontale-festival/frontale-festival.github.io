@@ -83,6 +83,10 @@ p {
   margin-top: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 article {
   h2 {
     text-align: center;
@@ -122,6 +126,15 @@ article {
     display: inline-block;
     vertical-align: top;
   }
+}
+
+.button {
+  display: inline-block;
+  padding: 0 20px;
+  border: 1px solid fadeout(@colorFg, 50);
+  border-radius: 18px;
+  line-height: 36px;
+  color: @colorFg;
 }
 
 #navigation {
@@ -282,53 +295,52 @@ article {
 }
 
 #program {
-  color: @colorFg;
+
+  &.active {
+    #overlay {
+      opacity: 1;
+    }
+  }
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-color: fadeout(@colorViolett, 10);
+    opacity: 0;
+    transition: opacity 200ms;
+  }
+
+  .slot.active {
+    position: relative;
+    z-index: 1;
+  }
 
   .slot-head {
-    position: relative;
+    display: block;
 
     h2 {
-      margin: 0;
-      line-height: 40px;
-      text-align: left;
-    }
+      margin-bottom: 0;
+      font-size: 1.4em;
 
-    .link-more {
-      display: block;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 40px;
-      height: 40px;
-      text-align: center;
-
-      .icon {
-        .icon(18px);
-        .center-vertically;
+      @media (min-width: @breakpointSmall) {
+        font-size: 1.8em;
       }
 
-      &.active {
-        opacity: 1;
-
-        .icon-plus {
-          display: none;
-        }
-
-        .icon-minus {
-          display: inline-block;
-        }
+      @media (min-width: @breakpointMedium) {
+        font-size: 3em;
       }
 
-      &:not(.active) {
-        opacity: .3;
+      .artist {
+        margin-right: .1em;
+        text-decoration: underline;
+      }
 
-        .icon-plus {
-          display: inline-block;
-        }
-
-        .icon-minus {
-          display: none;
-        }
+      .origin {
+        font-size: .4em;
+        font-weight: normal;
       }
     }
   }
@@ -337,31 +349,34 @@ article {
     display: none;
     margin-bottom: 12px;
 
-    .origin {
-      margin-bottom: 0;
-      color: @colorGerman;
+    .time {
+      padding: 15px;
+      text-align: center;
+      font-size: 1.5em;
     }
 
-    > div {
-      padding: 5px 0;
+    .social {
+      padding: 15px;
+      text-align: center;
     }
   }
 
-  .program-addendum {
-    padding: 20px;
+  .history {
+    padding: 5px;
     text-align: center;
-
-    .admission {
-      font-size: 1.5rem;
-      font-style: italic;
-      padding: 20px 0;
-    }
   }
 
-  .photo {
-    img {
-      max-width: 100%;
-    }
+}
+
+.program-addendum {
+  margin-top: 30px;
+  padding: 20px;
+  text-align: center;
+
+  .admission {
+    font-size: 1.5rem;
+    font-style: italic;
+    padding: 20px 0;
   }
 }
 
@@ -374,15 +389,6 @@ article {
       width: 300px;
       max-width: 100%;
       margin: 0 auto;
-
-      .button {
-        display: inline-block;
-        padding: 0 20px;
-        border: 1px solid fadeout(@colorFg, 80);
-        border-radius: 18px;
-        line-height: 36px;
-        color: @colorFg;
-      }
     }
 
     .map-image {
@@ -405,7 +411,6 @@ article {
   background-color: white;
   text-align: center;
   color: @colorViolett;
-
 
   .french {
     color: @colorYellow;
@@ -482,5 +487,22 @@ article {
   }
 }
 
+#program2015 {
+  color: @colorFg;
 
+  .slot-head {
+    position: relative;
+
+    h2 {
+      margin: 0;
+      line-height: 40px;
+      text-align: left;
+    }
+
+    .origin {
+      margin-bottom: 0;
+      color: @colorGerman;
+    }
+  }
+}
 
