@@ -242,48 +242,6 @@ article {
     color: @colorViolett;
   }
 
-  .countdown {
-    position: absolute;
-    bottom: 60px;
-    width: 100%;
-    padding: 0 5vw;
-
-    #countdown {
-      white-space: nowrap;
-      overflow: hidden;
-      background-color: fadeout(@colorViolett, 95);
-      color: @colorBg;
-      font-weight: bold;
-      text-align: center;
-      font-size: 18px;
-      border-radius: 5px;
-
-      @media (min-width: @breakpointMedium) {
-        font-size: 30px;
-      }
-
-      > div {
-        display: inline-block;
-        padding: 5px;
-        font-weight: bold;
-
-        @media (min-width: @breakpointMedium) {
-          padding: 10px;
-        }
-      }
-
-      .smalltext {
-        font-size: 10px;
-        font-weight: normal;
-        color: mix(@colorBg, @colorFg, 90);
-
-        @media (min-width: @breakpointMedium) {
-          font-size: 14px;
-        }
-      }
-    }
-  }
-
   .more {
     .icon(20px);
     position: absolute;
@@ -295,102 +253,18 @@ article {
 }
 
 #program {
-  .slot.active {
-    position: relative;
-    z-index: 1;
-
-    .slot-head {
-      .icon {
-        display: block;
-      }
-
-      h2 {
-        .artist {
-          text-decoration: none;
-        }
-      }
-    }
-  }
-
-  .slot-head {
-    display: block;
-    padding-left: 18px;
-    padding-right: 18px;
-    position: relative;
-
-    .icon {
-      position: absolute;
-      top: 5px;
-      right: 5px;
-      .icon(18px);
-      display: none;
-
-      @media (min-width: @breakpointSmall) {
-        width: 30px;
-        height: 30px;
-      }
-    }
-
-    h2 {
-      margin-bottom: 0;
-      font-size: 1.6em;
-
-      @media (min-width: @breakpointSmall) {
-        font-size: 1.9em;
-      }
-
-      @media (min-width: @breakpointMedium) {
-        font-size: 3em;
-      }
-
-      .artist {
-        margin-right: .1em;
-        text-decoration: underline;
-      }
-
-      .origin {
-        font-size: .4em;
-        font-weight: normal;
-      }
-    }
-  }
-
-  .slot-more {
-    display: none;
-    margin-bottom: 12px;
-
-    .time {
-      padding: 15px;
-      text-align: center;
-
-      @media (min-width: @breakpointSmall) {
-        font-size: 1.5em;
-      }
-
-    }
-
-    .social {
-      padding: 15px;
-      text-align: center;
-    }
-  }
-
-  .history {
-    padding: 5px;
-    text-align: center;
-  }
-
-}
-
-.program-addendum {
-  margin-top: 30px;
-  padding: 20px;
   text-align: center;
 
-  .admission {
-    font-size: 1.5rem;
-    font-style: italic;
-    padding: 20px 0;
+  .program-addendum {
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+
+    .admission {
+      font-size: 1.5rem;
+      font-style: italic;
+      padding: 20px 0;
+    }
   }
 }
 
@@ -526,3 +400,57 @@ article {
   }
 }
 
+#program2016 {
+  .slot-head {
+    display: block;
+    padding-left: 18px;
+    padding-right: 18px;
+    position: relative;
+
+    h2 {
+      margin-bottom: 0;
+      font-size: 1.6em;
+
+      @media (min-width: @breakpointSmall) {
+        font-size: 1.9em;
+      }
+
+      @media (min-width: @breakpointMedium) {
+        font-size: 3em;
+      }
+
+      .artist {
+        margin-right: .1em;
+      }
+
+      .origin {
+        font-size: .4em;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .slot-more {
+    margin-bottom: 12px;
+
+    .time {
+      padding: 15px;
+      text-align: center;
+
+      @media (min-width: @breakpointSmall) {
+        font-size: 1.5em;
+      }
+
+    }
+
+    .social {
+      padding: 15px;
+      text-align: center;
+    }
+  }
+
+  .history {
+    padding: 5px;
+    text-align: center;
+  }
+}

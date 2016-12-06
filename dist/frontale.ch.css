@@ -680,47 +680,6 @@ article.justify p {
 #header .french {
   color: #300033;
 }
-#header .countdown {
-  position: absolute;
-  bottom: 60px;
-  width: 100%;
-  padding: 0 5vw;
-}
-#header .countdown #countdown {
-  white-space: nowrap;
-  overflow: hidden;
-  background-color: rgba(48, 0, 51, 0.05);
-  color: #300033;
-  font-weight: bold;
-  text-align: center;
-  font-size: 18px;
-  border-radius: 5px;
-}
-@media (min-width: 600px) {
-  #header .countdown #countdown {
-    font-size: 30px;
-  }
-}
-#header .countdown #countdown > div {
-  display: inline-block;
-  padding: 5px;
-  font-weight: bold;
-}
-@media (min-width: 600px) {
-  #header .countdown #countdown > div {
-    padding: 10px;
-  }
-}
-#header .countdown #countdown .smalltext {
-  font-size: 10px;
-  font-weight: normal;
-  color: #451947;
-}
-@media (min-width: 600px) {
-  #header .countdown #countdown .smalltext {
-    font-size: 14px;
-  }
-}
 #header .more {
   display: inline-block;
   width: 20px;
@@ -733,87 +692,15 @@ article.justify p {
           transform: translateX(-50%);
   opacity: .4;
 }
-#program .slot.active {
-  position: relative;
-  z-index: 1;
-}
-#program .slot.active .slot-head .icon {
-  display: block;
-}
-#program .slot.active .slot-head h2 .artist {
-  text-decoration: none;
-}
-#program .slot-head {
-  display: block;
-  padding-left: 18px;
-  padding-right: 18px;
-  position: relative;
-}
-#program .slot-head .icon {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  background-size: contain;
-  display: none;
-}
-@media (min-width: 400px) {
-  #program .slot-head .icon {
-    width: 30px;
-    height: 30px;
-  }
-}
-#program .slot-head h2 {
-  margin-bottom: 0;
-  font-size: 1.6em;
-}
-@media (min-width: 400px) {
-  #program .slot-head h2 {
-    font-size: 1.9em;
-  }
-}
-@media (min-width: 600px) {
-  #program .slot-head h2 {
-    font-size: 3em;
-  }
-}
-#program .slot-head h2 .artist {
-  margin-right: .1em;
-  text-decoration: underline;
-}
-#program .slot-head h2 .origin {
-  font-size: .4em;
-  font-weight: normal;
-}
-#program .slot-more {
-  display: none;
-  margin-bottom: 12px;
-}
-#program .slot-more .time {
-  padding: 15px;
+#program {
   text-align: center;
 }
-@media (min-width: 400px) {
-  #program .slot-more .time {
-    font-size: 1.5em;
-  }
-}
-#program .slot-more .social {
-  padding: 15px;
-  text-align: center;
-}
-#program .history {
-  padding: 5px;
-  text-align: center;
-}
-.program-addendum {
+#program .program-addendum {
   margin-top: 30px;
   padding: 20px;
   text-align: center;
 }
-.program-addendum .admission {
+#program .program-addendum .admission {
   font-size: 1.5rem;
   font-style: italic;
   padding: 20px 0;
@@ -922,5 +809,52 @@ article.justify p {
 #program2015 .slot-head .origin {
   margin-bottom: 0;
   color: white;
+}
+#program2016 .slot-head {
+  display: block;
+  padding-left: 18px;
+  padding-right: 18px;
+  position: relative;
+}
+#program2016 .slot-head h2 {
+  margin-bottom: 0;
+  font-size: 1.6em;
+}
+@media (min-width: 400px) {
+  #program2016 .slot-head h2 {
+    font-size: 1.9em;
+  }
+}
+@media (min-width: 600px) {
+  #program2016 .slot-head h2 {
+    font-size: 3em;
+  }
+}
+#program2016 .slot-head h2 .artist {
+  margin-right: .1em;
+}
+#program2016 .slot-head h2 .origin {
+  font-size: .4em;
+  font-weight: normal;
+}
+#program2016 .slot-more {
+  margin-bottom: 12px;
+}
+#program2016 .slot-more .time {
+  padding: 15px;
+  text-align: center;
+}
+@media (min-width: 400px) {
+  #program2016 .slot-more .time {
+    font-size: 1.5em;
+  }
+}
+#program2016 .slot-more .social {
+  padding: 15px;
+  text-align: center;
+}
+#program2016 .history {
+  padding: 5px;
+  text-align: center;
 }
 /*# sourceMappingURL=frontale.ch.css.map */
