@@ -242,48 +242,6 @@ article {
     color: @colorViolett;
   }
 
-  .countdown {
-    position: absolute;
-    bottom: 60px;
-    width: 100%;
-    padding: 0 5vw;
-
-    #countdown {
-      white-space: nowrap;
-      overflow: hidden;
-      background-color: fadeout(@colorViolett, 95);
-      color: @colorBg;
-      font-weight: bold;
-      text-align: center;
-      font-size: 18px;
-      border-radius: 5px;
-
-      @media (min-width: @breakpointMedium) {
-        font-size: 30px;
-      }
-
-      > div {
-        display: inline-block;
-        padding: 5px;
-        font-weight: bold;
-
-        @media (min-width: @breakpointMedium) {
-          padding: 10px;
-        }
-      }
-
-      .smalltext {
-        font-size: 10px;
-        font-weight: normal;
-        color: mix(@colorBg, @colorFg, 90);
-
-        @media (min-width: @breakpointMedium) {
-          font-size: 14px;
-        }
-      }
-    }
-  }
-
   .more {
     .icon(20px);
     position: absolute;
