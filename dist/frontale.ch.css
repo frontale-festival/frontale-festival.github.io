@@ -680,47 +680,6 @@ article.justify p {
 #header .french {
   color: #300033;
 }
-#header .countdown {
-  position: absolute;
-  bottom: 60px;
-  width: 100%;
-  padding: 0 5vw;
-}
-#header .countdown #countdown {
-  white-space: nowrap;
-  overflow: hidden;
-  background-color: rgba(48, 0, 51, 0.05);
-  color: #300033;
-  font-weight: bold;
-  text-align: center;
-  font-size: 18px;
-  border-radius: 5px;
-}
-@media (min-width: 600px) {
-  #header .countdown #countdown {
-    font-size: 30px;
-  }
-}
-#header .countdown #countdown > div {
-  display: inline-block;
-  padding: 5px;
-  font-weight: bold;
-}
-@media (min-width: 600px) {
-  #header .countdown #countdown > div {
-    padding: 10px;
-  }
-}
-#header .countdown #countdown .smalltext {
-  font-size: 10px;
-  font-weight: normal;
-  color: #451947;
-}
-@media (min-width: 600px) {
-  #header .countdown #countdown .smalltext {
-    font-size: 14px;
-  }
-}
 #header .more {
   display: inline-block;
   width: 20px;
